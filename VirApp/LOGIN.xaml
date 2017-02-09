@@ -1,0 +1,102 @@
+﻿<Controls:MetroWindow  x:Class="VirApp.LOGIN"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirApp"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" 
+        mc:Ignorable="d"
+        Title="Connexion" Height="600" Width="700" WindowStartupLocation="CenterScreen" Icon="Image/Payments.png" >
+
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="img_fond/magazines-desk-work-workspace.jpg"/>
+        </Grid.Background>
+        <Grid Grid.Row="1" Grid.Column="1" Background="Black" Opacity="0.8"   >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="43*"/>
+                <RowDefinition Height="81*"/>
+                <RowDefinition Height="74*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="99*"/>
+                <RowDefinition Height="24*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Grid.Row="0" Grid.Column="1">
+            </Grid>
+            <Grid x:Name="LOGO" Grid.Row="1" Grid.Column="1">
+                <TextBlock x:Name="textBloc" Foreground="#41b1e1" HorizontalAlignment="Left" FontFamily="Matura MT Script Capitals" Height="{Binding ActualHeight, ElementName=LOGO, Mode=OneWay}"  TextWrapping="Wrap" Text="Vir" VerticalAlignment="Center" FontSize="30" Width="{Binding ActualWidth, ElementName=LOGO, Mode=OneWay}" Margin="44,22,-44,-22"/>
+                <TextBlock x:Name="textBoc" HorizontalAlignment="left" Height="{Binding ActualHeight, ElementName=textBoc, Mode=OneWay}" FontFamily="Matura MT Script Capitals" Margin="89,47,0,10" TextWrapping="Wrap" FontSize="18" Foreground="#a2a3a3" Text="App" VerticalAlignment="Center" Width="75" RenderTransformOrigin="0.467,0.333"/>
+            </Grid>
+            <Grid x:Name="info" Grid.Row="2" Grid.Column="1">
+                <TextBlock x:Name="tex_bloc" Foreground="White" TextAlignment="Left" Text="Connectez-vous à votre compte"   TextWrapping="Wrap" FontSize="25"/>
+
+
+            </Grid>
+            <Grid x:Name="user" Grid.Row="3" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Grid   Grid.Column="1">
+                    <TextBox   x:Name="NomUtilisateur"  Text="Nom d'utilisateur" Height="26" Margin="0,0,0,-1" VerticalAlignment="Top" GotFocus="NomUtilisateur_GotFocus" KeyDown="NomUtilisateur_KeyDown" >
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.5"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                </Grid>
+                <Grid   Grid.Column="0">
+                    <Image x:Name="User_Profile_png"  Source="img_fond/User-Profile.png" Stretch="Fill"/>
+
+                </Grid>
+
+            </Grid>
+            <Grid x:Name="password" Grid.Row="5" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Grid   Grid.Column="1">
+                    <PasswordBox x:Name="MotPasse"  Password="Mot de passe" GotFocus="MotPasse_GotFocus" KeyDown="MotPasse_KeyDown" />
+                </Grid>
+                <Grid   Grid.Column="0">
+                    <Image x:Name="Lock_png" Margin="-1,0,0,0" Source="img_fond/Lock.png" Stretch="Fill"/>
+
+                </Grid>
+
+            </Grid>
+            <Grid x:Name="Login" Grid.Row="7" Grid.Column="1">
+                <Button x:Name="Connexion" Foreground="White" Background="#FF0F7697" Content="Se Connecter"   Click="Login_" />
+
+
+            </Grid>
+            <Grid x:Name="info_app" Grid.Row="9" Grid.Column="1">
+                <TextBlock x:Name="tex_blocs" Foreground="#FF0F7697" TextAlignment="Center" Text="2016©Virapp"   TextWrapping="Wrap" FontSize="9"/>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Controls:MetroWindow>

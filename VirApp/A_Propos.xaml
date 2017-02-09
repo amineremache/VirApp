@@ -1,0 +1,45 @@
+﻿<Controls:MetroWindow x:Class="VirApp.A_Propos"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirApp"
+        mc:Ignorable="d"
+         Height="400" Width="500" Icon="Image/Payments.png"
+                      WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="img_fond/pexels-photo (3).jpg"/>
+        </Grid.Background>
+        <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="black" Opacity="0.9" Height="308" Width="410">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="169*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock x:Name="textBloc" Foreground="#41b1e1" HorizontalAlignment="Left" FontFamily="Matura MT Script Capitals" Height="{Binding ActualHeight, ElementName=LOGO, Mode=OneWay}"  TextWrapping="Wrap" Text="Vir" VerticalAlignment="Center" FontSize="30" Width="{Binding ActualWidth, ElementName=LOGO, Mode=OneWay}" Margin="145,22,0,14"/>
+                <TextBlock x:Name="textBoc" HorizontalAlignment="left" Height="{Binding ActualHeight, ElementName=textBoc, Mode=OneWay}" FontFamily="Matura MT Script Capitals" Margin="194,42,0,10" TextWrapping="Wrap" FontSize="18" Foreground="#a2a3a3" Text="App" VerticalAlignment="Center" Width="75" RenderTransformOrigin="0.467,0.333"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock x:Name="textBlock" Foreground="White" HorizontalAlignment="Center" Height="161" TextWrapping="Wrap" Text="VirApp est une application libre de gestion des virements du personnelle de l'ESI,Elle permet de gérer de façon conviviale les primes. 
+                           
+                           
+                           Elle a été créée dans le cadre d'un projet pluridisciplinaire de l'école supérieure d'informatique et développée par : REMACHE Amine, AOUIMEUR Yasmine, DJEBILI Chiheb, IDRIS Warda, IKHLEF Issam et AZZAZ Hicham.
+                                                          
+                           Encadré par : Mme EL ALIA et Mme CHARABI" VerticalAlignment="Center" TextAlignment="Center" Width="390" Margin="10,25,10,46"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>

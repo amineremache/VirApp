@@ -1,0 +1,36 @@
+﻿<Controls:MetroWindow x:Class="VirApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fsxaml="http://github.com/fsprojects/FsXaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" 
+        xmlns:local="clr-namespace:VirApp"
+        mc:Ignorable="d"
+        Title="VirApp" Height="700" Width="1000" WindowStartupLocation="CenterScreen" Icon="Image/Payments.png">
+    
+    
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+
+            <Button x:Name="Aide" Content="Aide" Click="Aide_Click"  />
+
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <Grid Background="white">
+
+
+        <Grid x:Name="Main_Grid">
+            <local:WorkSpace>
+                <local:WorkSpace.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.05"/>
+                </local:WorkSpace.Background>
+            </local:WorkSpace>
+        </Grid>
+
+        <ResizeGrip x:Name="resizeGrip" Grid.RowSpan="3"/>
+    </Grid>
+
+
+</Controls:MetroWindow>
